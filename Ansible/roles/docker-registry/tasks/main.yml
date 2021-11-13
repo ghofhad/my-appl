@@ -7,7 +7,7 @@
     
 - name: Tag and push to docker hub
   docker_image:
-    name: pipeline:latest
+    name: myappl:latest
     repository: 94529044/pipeline
     tag: end
     push: yes

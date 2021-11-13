@@ -7,7 +7,7 @@
     
 - name: Tag and push to docker hub
   docker_image:
-    name: angular:latest
+    name: pipeline:latest
     repository: 94529044/pipeline
     tag: end
     push: yes

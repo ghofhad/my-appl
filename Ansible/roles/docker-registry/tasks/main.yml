@@ -1,8 +1,11 @@
 ---
 # tasks file for docker-registry
 - name: Tag and push to docker hub
+  docker_login:
+    username: 94529044
+    password: dockerhub123
   docker_image:
     name: 94529044/pipeline:myappl
-    repository: ash92/pipeline
+    repository: 94529044/pipeline
     tag: myappl
     push: yes

@@ -5,8 +5,8 @@ pipeline {
              steps{
                 script{
                     checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-                        userRemoteConfigs: [[credentialsId: '12f47b4d-e39b-4dcf-bf05-515f293f9445',
-                            url: 'https://github.com/ghofhad/my-app.git']]])
+                        userRemoteConfigs: [[credentialsId: '1aaa4417-1d9c-4bd7-8a5e-84f5c13aed47',
+                            url: 'https://github.com/ghofhad/my-appl.git']]])
                 }
             }
         }
@@ -40,5 +40,17 @@ pipeline {
                 }
             }
         }
-}
-}
+        stage('Docker') {
+             steps{
+                script{
+                    sh "sudo ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml"
+                }
+            }
+        }
+
+	
+     }
+      
+      
+    }
+    

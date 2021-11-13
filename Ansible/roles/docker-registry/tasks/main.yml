@@ -1,0 +1,8 @@
+---
+# tasks file for docker-registry
+- name: Tag and push to docker hub
+  docker_image:
+    name: 94529044/pipeline:myappl
+    repository: ash92/pipeline
+    tag: myappl
+    push: yes

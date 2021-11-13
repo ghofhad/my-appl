@@ -4,8 +4,10 @@
   docker_login:
     username: 94529044
     password: dockerhub123
+    
+- name: Tag and push to docker hub
   docker_image:
-    name: 94529044/pipeline:myappl
-    repository: 94529044/pipeline
-    tag: myappl
+    name: angular:latest
+    repository: haifa54/myapp
+    tag: end
     push: yes
